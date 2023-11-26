@@ -47,8 +47,7 @@ const Login = () => {
 
     }
     return (
-        <HelmetProvider>
-            <div className=" max-w-4xl mx-auto min-h-[70vh] px-3 my-5  flex flex-col  justify-center items-center ">
+        <div className=" max-w-4xl mx-auto min-h-[70vh] px-3 my-5  flex flex-col  justify-center items-center ">
                 <Helmet>
                     <title>Travel Beat | Login</title>
                 </Helmet>
@@ -91,7 +90,6 @@ const Login = () => {
 
 
             </div>
-        </HelmetProvider>
     );
 };
 

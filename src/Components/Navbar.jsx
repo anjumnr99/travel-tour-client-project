@@ -49,10 +49,10 @@ const Navbar = () => {
 
     return (
         
-            <div className="navbar bg-black bg-opacity-30   fixed z-10 px-6 py-3 ">
+            <div className="navbar bg-slate-100 bg-opacity-60   fixed z-10 px-6 py-3 ">
                 <div className="navbar-start">
 
-                    <button className=" w-72">
+                    <button className=" w-56">
                         <img src={logo} className="h-fit w-full" />
                     </button>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
 
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal text-center px-1">
-                        <li className="text-md lg:text-xl font-semibold text-blue-200">
+                        <li className="text-md lg:text-xl font-semibold text-gray-800">
                             <NavLink
                                 to="/"
                                 className={({ isActive, isPending }) =>
@@ -74,7 +74,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
 
-                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
+                        <li className="text-md lg:text-xl  font-semibold text-gray-800">
                             <NavLink
                                 to="/community"
                                 className={({ isActive, isPending }) =>
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 Community
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
+                        <li className="text-md lg:text-xl  font-semibold text-gray-800">
                             <NavLink
                                 to="/blogs"
                                 className={({ isActive, isPending }) =>
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 Blogs
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
+                        <li className="text-md lg:text-xl  font-semibold text-gray-800">
                             <NavLink
                                 to="/about-us"
                                 className={({ isActive, isPending }) =>
@@ -104,7 +104,7 @@ const Navbar = () => {
                                 About Us
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
+                        <li className="text-md lg:text-xl  font-semibold text-gray-800">
                             <NavLink
                                 to="/contact-us"
                                 className={({ isActive, isPending }) =>
@@ -125,7 +125,7 @@ const Navbar = () => {
 
                         </label>
                         <ul tabIndex={0} className="menu dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-fit md:w-52">
-                            <li className="text-lg border-none font-semibold text-blue-200">
+                            <li className="text-lg border-none font-semibold text-gray-800">
                                 <NavLink
                                     to="/"
                                     className={({ isActive, isPending }) =>
@@ -136,7 +136,7 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
 
-                            <li className="text-lg  font-semibold text-blue-200">
+                            <li className="text-lg  font-semibold text-gray-800">
                                 <NavLink
                                     to="/community"
                                     className={({ isActive, isPending }) =>
@@ -146,7 +146,7 @@ const Navbar = () => {
                                     Community
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-blue-200">
+                            <li className="text-lg  font-semibold text-gray-800">
                                 <NavLink
                                     to="/blogs"
                                     className={({ isActive, isPending }) =>
@@ -156,7 +156,7 @@ const Navbar = () => {
                                     Blogs
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-blue-200">
+                            <li className="text-lg  font-semibold text-gray-800">
                                 <NavLink
                                     to="/about-us"
                                     className={({ isActive, isPending }) =>
@@ -166,7 +166,7 @@ const Navbar = () => {
                                     About Us
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-blue-200">
+                            <li className="text-lg  font-semibold text-gray-800">
                                 <NavLink
                                     to="/contact-us"
                                     className={({ isActive, isPending }) =>
@@ -186,7 +186,7 @@ const Navbar = () => {
 
                             <button onClick={() => handleDropDownMenu(setIsShow(!isShow))} id="dropdownUserAvatarButton" className="flex text-sm bg-gray-600 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
                                 <span className="sr-only">Open user menu</span>
-                                <img className=" w-12 h-12 md:w-20 md:h-20 rounded-full" src={user?.photoURL} alt="user photo" />
+                                <img className=" w-12 h-12 md:w-16 md:h-16 rounded-full" src={user?.photoURL} alt="user photo" />
                             </button>
 
                             {/* <!-- Dropdown menu --> */}

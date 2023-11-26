@@ -1,6 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import VideoContent from '../VideoContent/VideoContent';
+import OurPackages from '../OurPackages/OurPackages';
 
 
 const TabItems = () => {
@@ -9,9 +10,9 @@ const TabItems = () => {
 
             <Tabs>
                 <TabList>
-                    <Tab><h1 className='text-lg font-medium'>Overview</h1></Tab>
-                    <Tab><h1 className='text-lg font-medium'>Our Packages</h1></Tab>
-                    <Tab><h1 className='text-lg font-medium'>Meet Our Tour Guides</h1></Tab>
+                    <Tab><h1 className='text-md   md:text-lg font-medium'>Overview</h1></Tab>
+                    <Tab><h1 className='text-md  md:text-lg  font-medium'>Our Packages</h1></Tab>
+                    <Tab><h1 className='text-md  md:text-lg  font-medium'>Meet Our Tour Guides</h1></Tab>
                 </TabList>
 
                 <TabPanel>
@@ -21,7 +22,7 @@ const TabItems = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                    <OurPackages></OurPackages>
                 </TabPanel>
                 <TabPanel>
                     <h2>Any content 3</h2>

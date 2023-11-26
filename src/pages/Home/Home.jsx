@@ -6,17 +6,15 @@ import TabItems from "./TabsItems/TabItems";
 
 const Home = () => {
     return (
-        <HelmetProvider>
+        <div>
+            <Helmet>
+                <title>Travel Beat | Home</title>
+            </Helmet>
             <div>
-                <Helmet>
-                    <title>Travel Beat | Home</title>
-                </Helmet>
-                <div>
-                    <Banner></Banner>
-                    <TabItems></TabItems>
-                </div>
+                <Banner></Banner>
+                <TabItems></TabItems>
             </div>
-        </HelmetProvider>
+        </div>
     );
 };
 

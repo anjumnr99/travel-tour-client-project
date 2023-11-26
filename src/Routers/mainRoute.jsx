@@ -7,6 +7,7 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Community from "../pages/Community/Community";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import Blogs from "../pages/Blogs/Blogs";
+import PackageDetails from "../pages/Home/OurPackages/PackageDetails";
 
 
 const mainRoute = createBrowserRouter([
@@ -41,6 +42,10 @@ const mainRoute = createBrowserRouter([
         {
           path:'register',
           element:<Register></Register>
+        },
+        {
+          path:'package-details/:id',
+          element:<PackageDetails></PackageDetails>
         }
       ]
     },

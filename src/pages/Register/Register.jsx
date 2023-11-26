@@ -63,8 +63,7 @@ const Register = () => {
 
     };
     return (
-        <HelmetProvider>
-            <div className=" max-w-2xl mx-auto min-h-[60vh] px-3 py-3 my-5 flex flex-col  justify-center items-center ">
+        <div className=" max-w-2xl mx-auto min-h-[60vh] px-3 py-3 my-5 flex flex-col  justify-center items-center ">
                 <Helmet>
                     <title>Travel Beat | Register</title>
                 </Helmet>
@@ -131,7 +130,6 @@ const Register = () => {
 
                 </div>
             </div>
-        </HelmetProvider>
     );
 };
 
