@@ -48,8 +48,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className="bg-transparent px-4 py-3">
-            <div className="navbar ">
+        
+            <div className="navbar bg-transparent  fixed z-10 px-4 py-3 ">
                 <div className="navbar-start">
 
                     <button className=" w-72">
@@ -63,52 +63,52 @@ const Navbar = () => {
 
                 <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal text-center px-1">
-                        <li className="text-md lg:text-xl font-semibold text-slate-600">
+                        <li className="text-md lg:text-xl font-semibold text-blue-200">
                             <NavLink
                                 to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : " "
+                                    isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : " "
                                 }
                             >
                                 Home
                             </NavLink>
                         </li>
 
-                        <li className="text-md lg:text-xl  font-semibold text-slate-600">
+                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
                             <NavLink
                                 to="/community"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? " text-blue-700 font-bold" : ""
+                                    isPending ? "pending" : isActive ? " text-blue-600 font-bold" : ""
                                 }
                             >
                                 Community
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-slate-600">
+                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
                             <NavLink
                                 to="/blogs"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                    isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                 }
                             >
                                 Blogs
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-slate-600">
+                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
                             <NavLink
                                 to="/about-us"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                    isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                 }
                             >
                                 About Us
                             </NavLink>
                         </li>
-                        <li className="text-md lg:text-xl  font-semibold text-slate-600">
+                        <li className="text-md lg:text-xl  font-semibold text-blue-200">
                             <NavLink
                                 to="/contact-us"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                    isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                 }
                             >
                                 Contact Us
@@ -125,52 +125,52 @@ const Navbar = () => {
 
                         </label>
                         <ul tabIndex={0} className="menu dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-fit md:w-52">
-                            <li className="text-lg border-none font-semibold text-slate-600">
+                            <li className="text-lg border-none font-semibold text-blue-200">
                                 <NavLink
                                     to="/"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? " text-blue-700 font-bold" : ""
+                                        isPending ? "pending" : isActive ? " text-blue-600 font-bold" : ""
                                     }
                                 >
                                     Home
                                 </NavLink>
                             </li>
 
-                            <li className="text-lg  font-semibold text-slate-600">
+                            <li className="text-lg  font-semibold text-blue-200">
                                 <NavLink
                                     to="/community"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                        isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                     }
                                 >
                                     Community
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-slate-600">
+                            <li className="text-lg  font-semibold text-blue-200">
                                 <NavLink
                                     to="/blogs"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                        isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                     }
                                 >
                                     Blogs
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-slate-600">
+                            <li className="text-lg  font-semibold text-blue-200">
                                 <NavLink
                                     to="/about-us"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                        isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                     }
                                 >
                                     About Us
                                 </NavLink>
                             </li>
-                            <li className="text-lg  font-semibold text-slate-600">
+                            <li className="text-lg  font-semibold text-blue-200">
                                 <NavLink
                                     to="/contact-us"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "   text-blue-700 font-bold" : ""
+                                        isPending ? "pending" : isActive ? "   text-blue-600 font-bold" : ""
                                     }
                                 >
                                     Contact Us
@@ -184,18 +184,18 @@ const Navbar = () => {
                     {
                         user?.email ? <div>
 
-                            <button onClick={() => handleDropDownMenu(setIsShow(!isShow))} id="dropdownUserAvatarButton" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+                            <button onClick={() => handleDropDownMenu(setIsShow(!isShow))} id="dropdownUserAvatarButton" className="flex text-sm bg-gray-600 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
                                 <span className="sr-only">Open user menu</span>
                                 <img className=" w-12 h-12 md:w-20 md:h-20 rounded-full" src={user?.photoURL} alt="user photo" />
                             </button>
 
                             {/* <!-- Dropdown menu --> */}
-                            <div id="dropdownAvatar" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700 dark:divide-gray-600">
+                            <div id="dropdownAvatar" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-600 dark:divide-gray-600">
                                 <div className="px-2 py-3 text-md text-gray-900 dark:text-white">
                                     <div>{user?.displayName}</div>
                                     <div className=" font-medium truncate">{user?.email}</div>
                                 </div>
-                                <ul className="py-2 text-md text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+                                <ul className="py-2 text-md text-gray-600 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
                                     <li>
                                         <Link className="block text-md px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</Link>
                                     </li>
@@ -206,7 +206,7 @@ const Navbar = () => {
                                 </ul>
 
                                 <div className="">
-                                    <button onClick={handleLogOut} className="block w-full px-4 py-2 text-md font-semibold text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"> Logout
+                                    <button onClick={handleLogOut} className="block w-full px-4 py-2 text-md font-semibold text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"> Logout
                                     </button>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@ const Navbar = () => {
                             <div className="flex justify-center items-center gap-3">
 
 
-                                <button className="text-2xl  font-semibold text-slate-600">
+                                <button className="text-2xl  font-semibold text-blue-200">
                                     <NavLink
                                         to="/login"
                                         className={({ isActive, isPending }) =>
@@ -231,7 +231,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-        </div>
+        
     );
 };
 

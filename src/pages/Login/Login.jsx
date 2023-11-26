@@ -4,8 +4,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
-import { HelmetProvider } from "react-helmet-async";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 
 const Login = () => {
     const { googleLogin, loginWithEmailAndPassword } = useContext(AuthContext);
