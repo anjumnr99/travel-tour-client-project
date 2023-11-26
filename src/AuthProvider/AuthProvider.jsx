@@ -37,14 +37,14 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             setLoading(false);
 
-            // if (currentUser) {
-            //     const loggedUser = { email: currentUser.email };
+            if (currentUser) {
+                const loggedUser = { email: currentUser.email };
 
-            //     axios.post('https://grow-barter-server-project-gg7p782kd-anjus-projects-6a90d7b7.vercel.app/jwt', loggedUser, { withCredentials: true })
-            //         .then(res => {
-            //             console.log(res.data);
-            //         })
-            // }
+                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data);
+                    })
+            }
         });
 
         return()=>{

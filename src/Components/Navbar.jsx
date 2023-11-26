@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useContext, useState } from "react";
-import { IoIosPerson } from 'react-icons/io';
+// import { IoIosPerson } from 'react-icons/io';
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import logo from '../assets/logo.png';
