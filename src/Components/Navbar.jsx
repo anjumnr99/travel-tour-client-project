@@ -49,7 +49,7 @@ const Navbar = () => {
 
     return (
         
-            <div className="navbar bg-transparent  fixed z-10 px-4 py-3 ">
+            <div className="navbar bg-black bg-opacity-30   fixed z-10 px-6 py-3 ">
                 <div className="navbar-start">
 
                     <button className=" w-72">

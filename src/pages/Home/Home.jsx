@@ -1,6 +1,7 @@
 
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Banner from "./Banner/Banner";
+import TabItems from "./TabsItems/TabItems";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
                 </Helmet>
                 <div>
                     <Banner></Banner>
+                    <TabItems></TabItems>
                 </div>
             </div>
         </HelmetProvider>

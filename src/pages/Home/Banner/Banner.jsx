@@ -29,9 +29,9 @@ const Banner = () => {
                 <SwiperSlide>
                     {/* <img  src="https://i.ibb.co/GHJvG9Z/Ahsan-Manjil.jpg" alt="" />  */}
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/GHJvG9Z/Ahsan-Manjil.jpg)' }}>
-                        <div className="hero-overlay bg-opacity-60"></div>
-                        <div className="hero-content  mt-16  text-center text-neutral-content">
-                            <div className="max-w-2xl text-white ">
+                        <div className="hero-overlay bg-opacity-40"></div>
+                        <div className="hero-content  mt-28  text-center text-neutral-content">
+                            <div className=" max-w-xl md:max-w-2xl lg:max-w-3xl  ">
                                 <p className="mb-4 uppercase text-blue-300 ">The Best Travel Agency.</p>
                                 <h1 className="mb-5 text-4xl md:text-5xl lg:text-7xl font-bold">Explore Bangladesh With <span className='text-blue-300'>Travel Beat</span></h1>
 
@@ -43,9 +43,9 @@ const Banner = () => {
                 <SwiperSlide>
                     {/* <img src="https://i.ibb.co/tHVx1rX/iraj-ishtiak-Ct-Nw-NWAp4-BQ-unsplash.jpg" alt="" /> */}
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/tHVx1rX/iraj-ishtiak-Ct-Nw-NWAp4-BQ-unsplash.jpg)' }}>
-                        <div className="hero-overlay bg-opacity-60"></div>
-                        <div className="hero-content  mt-16  text-center text-neutral-content">
-                            <div className="max-w-2xl text-white ">
+                        <div className="hero-overlay bg-opacity-40"></div>
+                        <div className="hero-content  mt-28  text-center text-neutral-content">
+                            <div className=" max-w-xl md:max-w-2xl lg:max-w-3xl  ">
                                 <p className="mb-4 uppercase text-blue-300 ">The Best Travel Agency.</p>
                                 <h1 className="mb-5 text-4xl md:text-5xl lg:text-7xl font-bold">Explore Bangladesh With <span className='text-blue-300'>Travel Beat</span></h1>
 
@@ -58,9 +58,9 @@ const Banner = () => {
                 <SwiperSlide>
                     {/* <img src="https://i.ibb.co/M7LX2jL/iraj-ishtiak-4hx4-Tlg8ii-I-unsplash.jpg" alt="" /> */}
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/M7LX2jL/iraj-ishtiak-4hx4-Tlg8ii-I-unsplash.jpg)' }}>
-                        <div className="hero-overlay bg-opacity-60"></div>
-                        <div className="hero-content  mt-16  text-center text-neutral-content">
-                            <div className="max-w-2xl text-white ">
+                        <div className="hero-overlay bg-opacity-40"></div>
+                        <div className="hero-content  mt-28  text-center text-neutral-content">
+                            <div className=" max-w-xl md:max-w-2xl lg:max-w-3xl  ">
                                 <p className="mb-4 uppercase text-blue-300 ">The Best Travel Agency.</p>
                                 <h1 className="mb-5 text-4xl md:text-5xl lg:text-7xl font-bold">Explore Bangladesh With <span className='text-blue-300'>Travel Beat</span></h1>
 
@@ -72,9 +72,9 @@ const Banner = () => {
                 <SwiperSlide>
                     {/* <img src="https://i.ibb.co/QdHxjnd/s-m-ibrahim-1-NEJki-TTu-LU-unsplash.jpg" alt="" /> */}
                 <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/QdHxjnd/s-m-ibrahim-1-NEJki-TTu-LU-unsplash.jpg)' }}>
-                        <div className="hero-overlay bg-opacity-60"></div>
-                        <div className="hero-content  mt-16  text-center text-neutral-content">
-                            <div className="max-w-2xl text-white ">
+                        <div className="hero-overlay bg-opacity-40"></div>
+                        <div className="hero-content  mt-28  text-center text-neutral-content">
+                            <div className=" max-w-xl md:max-w-2xl lg:max-w-3xl  ">
                                 <p className="mb-4 uppercase text-blue-300 ">The Best Travel Agency.</p>
                                 <h1 className="mb-5 text-4xl md:text-5xl lg:text-7xl font-bold">Explore Bangladesh With <span className='text-blue-300'>Travel Beat</span></h1>
 
