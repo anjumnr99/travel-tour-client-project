@@ -215,7 +215,7 @@ const Navbar = () => {
                             <div className="flex justify-center items-center gap-3">
 
 
-                                <button className="text-2xl  font-semibold text-blue-200">
+                                <button className="text-2xl  font-semibold text-blue-500">
                                     <NavLink
                                         to="/login"
                                         className={({ isActive, isPending }) =>

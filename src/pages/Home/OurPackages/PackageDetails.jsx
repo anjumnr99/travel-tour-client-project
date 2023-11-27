@@ -4,10 +4,12 @@ import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import Gallary from "./Gallary";
 import TourGuideList from "./TourGuideList";
+import BookingForm from "./BookingForm";
+
 
 
 const PackageDetails = () => {
-
+    
     const { id } = useParams();
     const axiosPublic = useAxiosPublic();
 
@@ -40,12 +42,12 @@ const PackageDetails = () => {
                     {
                         tour_plan?.map((tour, index) => <div key={index}>
                             <h2>
-                                <button type="button" className="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-xl font-semibold text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" >
+                                <button type="button" className="flex items-center justify-between w-full p-5  rtl:text-right text-xl font-semibold text-gray-900 bg-blue-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-800 gap-3" >
                                     Day : {tour.day}
                                 </button>
                             </h2>
                             <div  >
-                                <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                                <div className="p-5 border mb-3 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                                     <p className="mb-2 text-lg text-gray-700 dark:text-gray-400">{tour.place_description}</p>
 
                                 </div>
@@ -60,7 +62,12 @@ const PackageDetails = () => {
             <div className="bg-blue-100 py-4">
                 <h1 className='text-3xl lg:text-5xl font-semibold text-slate-800 text-center my-10'>Our Tour Guides </h1>
                 <TourGuideList></TourGuideList>
+            </div>
 
+            <div className="my-10">
+            <h1 className='text-2xl lg:text-5xl font-semibold text-slate-800 text-center my-10'>For Booking Fill-up the below Form </h1>
+                
+                <BookingForm price={price} trip_title={trip_title}></BookingForm>
             </div>
 
 

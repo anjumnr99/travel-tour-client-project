@@ -7,6 +7,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 import { FcGoogle } from "react-icons/fc";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 
 
@@ -38,13 +39,43 @@ const Register = () => {
                             window.location.reload();
                         }, 1000);
 
-                        toast.success('Profile successfully created!')
+                        // toast.success('Profile successfully created!')
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: "top-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.onmouseenter = Swal.stopTimer;
+                              toast.onmouseleave = Swal.resumeTimer;
+                            }
+                          });
+                          Toast.fire({
+                            icon: "success",
+                            title: "Profile successfully created!"
+                          });
                         navigate('/');
 
                     })
             })
             .catch(err => {
-                toast.error(err.message)
+                // toast.error(err.message)
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "error",
+                    title: err.message
+                  });
             })
 
     };
@@ -53,11 +84,41 @@ const Register = () => {
         googleLogin()
             .then(result => {
                 console.log(result);
-                toast.success('Logged Successfully!')
+                // toast.success('Logged Successfully!')
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "success",
+                    title: "Signed in successfully"
+                  });
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
-                toast.error(err.message)
+                // toast.error(err.message)
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "error",
+                    title: err.message
+                  });
 
             })
 

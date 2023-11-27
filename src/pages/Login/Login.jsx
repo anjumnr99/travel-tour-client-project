@@ -5,6 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -16,11 +17,41 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 console.log(result);
-                toast.success('Logged Successfully!')
+                // toast.success('Logged Successfully!')
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "success",
+                    title: 'Logged Successfully!'
+                  });
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
-                toast.error(err.message)
+                // toast.error(err.message)
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "error",
+                    title: err.message
+                  });
 
             })
 
@@ -36,11 +67,41 @@ const Login = () => {
         loginWithEmailAndPassword(email, password)
             .then(result => {
 
-                toast.success('Logged Successfully!')
+                // toast.success('Logged Successfully!')
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "success",
+                    title: "Signed in successfully"
+                  });
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
-                toast.error(err.message)
+                // toast.error(err.message)
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.onmouseenter = Swal.stopTimer;
+                      toast.onmouseleave = Swal.resumeTimer;
+                    }
+                  });
+                  Toast.fire({
+                    icon: "error",
+                    title: err.message
+                  });
                 console.log(err);
             })
 

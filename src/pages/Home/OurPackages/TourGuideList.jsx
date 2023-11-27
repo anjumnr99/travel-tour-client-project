@@ -10,23 +10,12 @@ import './styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-import useAxiosPublic from '../../../Hooks/useAxiosPublic';
-import { useQuery } from '@tanstack/react-query';
+import useGuideList from '../../../Hooks/useGuideList';
+
 
 const TourGuideList = () => {
 
-    const axiosPublic = useAxiosPublic();
-
-    // console.log(id);
-
-    const { data: guideList } = useQuery({
-        queryKey: ['guides'],
-        queryFn: async () => {
-            const res = await axiosPublic.get('/guides');
-            // console.log('res data:',res.data);
-            return res.data;
-        }
-    });
+    const [guideList] = useGuideList();
 
     console.log(guideList);
 
@@ -41,11 +30,11 @@ const TourGuideList = () => {
                 }}
                 breakpoints={{
                     640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 40,
                     },
                     1024: {
@@ -71,7 +60,7 @@ const TourGuideList = () => {
                         </div>
                     </div></SwiperSlide>)
                 }
-                \
+               
             </Swiper>
         </>
 
