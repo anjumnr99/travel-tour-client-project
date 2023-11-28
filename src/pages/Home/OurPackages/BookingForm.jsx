@@ -62,7 +62,7 @@ const BookingForm = ({ price,trip_title }) => {
                 }
             }
         } else {
-            navigate('/login');
+            navigate('/login',{state: location.pathname});
         }
 
     }

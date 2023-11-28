@@ -15,10 +15,13 @@ const Home = () => {
             </Helmet>
             <div>
                 <Banner></Banner>
-                <TabItems></TabItems>
-                <TourType></TourType>
-                <Stories></Stories>
-                
+                <div className="">
+                    <TabItems></TabItems>
+                    <TourType></TourType>
+                    <Stories></Stories>
+
+                </div>
+
             </div>
         </div>
     );

@@ -16,6 +16,9 @@ import MakeReview from "../pages/GuideProfile/Review/MakeReview";
 import TypePackage from "../pages/Home/TourType/TypePackage";
 import AllStory from "../pages/Home/Story/AllStory";
 import StoryDetails from "../pages/Home/Story/StoryDetails";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import MyProfile from "../pages/MyProfile/MyProfile";
+import MyWishList from "../pages/MyWishList/MyWishList";
 
 
 const mainRoute = createBrowserRouter([
@@ -60,12 +63,7 @@ const mainRoute = createBrowserRouter([
         path: 'guide-profile/:id',
         element:<GuideProfile></GuideProfile>
       },
-      {
-        path: 'my-bookings',
-        element: <PrivateRouter>
-          <MyBookings></MyBookings>
-        </PrivateRouter>
-      },
+
       {
         path:'all-packages',
         element:<AllPackages></AllPackages>
@@ -82,6 +80,26 @@ const mainRoute = createBrowserRouter([
         path: 'register',
         element: <Register></Register>
       },
+      {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children:[
+          {
+            path: 'my-profile',
+            element: <MyProfile></MyProfile>
+          },
+          {
+            path: 'my-bookings',
+            element:<MyBookings></MyBookings>
+           
+          },
+          {
+            path: 'my-wishlist',
+            element:<MyWishList></MyWishList>
+           
+          },
+        ]
+      }
     ]
   }
 

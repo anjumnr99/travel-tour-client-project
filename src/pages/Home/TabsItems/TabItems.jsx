@@ -9,7 +9,7 @@ import MeetOurGuides from '../MeetOurGuides/MeetOurGuides';
 const TabItems = () => {
 
     return (
-        <div className='my-10 py-10'>
+        <div className=''>
              <h1 className='text-3xl lg:text-5xl font-semibold text-slate-800 text-center my-10'>Explore Us</h1>
 
             <Tabs>

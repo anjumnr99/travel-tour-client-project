@@ -2,7 +2,7 @@ import DataTable from "./DataTable";
 
 const MyBookings = () => {
     return (
-        <div className="">
+        <div className="w-full">
             <DataTable></DataTable>
         </div>
     );

@@ -47,7 +47,7 @@ const GuideProfile = () => {
     //     }
     // }
     return (
-        <div>
+        <div className="pt-[140px] md:pt-[180px] lg:pt:[127] pb-20 px-5">
 
             <div className="flex flex-col items-center p-2 bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <img className="object-cover w-full rounded-t-lg h-96 md:h-full md:w-[50%] md:rounded-none md:rounded-s-lg" src={profilePicture} alt="" />

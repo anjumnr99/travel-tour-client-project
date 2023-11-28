@@ -29,7 +29,7 @@ const PackageDetails = () => {
     const { _id, images, tour_type, trip_title, price, tour_description, tour_plan, tour_guides } = packageDetail || {};
 
     return (
-        <div>
+        <div className="pt-[140px] md:pt-[180px] lg:pt:[127] pb-20 px-5">
             <div className="mb-10">
                 <Gallary images={images}></Gallary>
             </div>

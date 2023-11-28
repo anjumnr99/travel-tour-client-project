@@ -22,7 +22,7 @@ const MeetOurGuides = () => {
 
 
     return (
-        <>
+        <div className=' pt-10  '>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
@@ -44,10 +44,10 @@ const MeetOurGuides = () => {
                     },
                 }}
                 modules={[Pagination]}
-                className="mySwiper "
+                className="tour-guide-style"
             >
                 {
-                    guideList?.map((item, index) => <SwiperSlide key={index}><Link className='p-3 flex flex-col bg-blue-100 items-center'>
+                    guideList?.map((item, index) => <SwiperSlide key={index}><Link className='p-3 flex flex-col mt-5 bg-blue-100 items-center'>
                         <div className="avatar">
                             <div className="w-56 ring ring-base-500 ring-offset-base-300 ring-offset-4">
                                 <img src={item.profilePicture} />
@@ -55,17 +55,17 @@ const MeetOurGuides = () => {
 
                         </div>
                         <div className='text-left my-5'>
-                            <p className='text-2xl text-base-600 font-semibold'>{item.name}</p>
-                            <p className=' text-slate-600 font-bold'>{item?.contactDetails?.address}</p>
+                            <p className='text-lg text-base-600 font-semibold'>{item.name}</p>
+                            <p className=' text-base text-slate-600 font-bold'>{item?.contactDetails?.address}</p>
                             <p className=' text-slate-400 '>Experience : {item?.workExperience}</p>
                         </div>
                         <Link to={`/guide-profile/${item._id}`} className='w-full'>
-                            <button className='px-4 py-2 border bg-slate-500 w-full uppercase btn'>details</button></Link>
+                            <button className=' border bg-slate-500 w-full uppercase btn'>details</button></Link>
                     </Link></SwiperSlide>)
                 }
 
             </Swiper>
-        </>
+        </div>
 
     );
 };
