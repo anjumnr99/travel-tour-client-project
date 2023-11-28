@@ -2,6 +2,7 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Banner from "./Banner/Banner";
 import TabItems from "./TabsItems/TabItems";
+import TourType from "./TourType/TourType";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <div>
                 <Banner></Banner>
                 <TabItems></TabItems>
+                <TourType></TourType>
             </div>
         </div>
     );

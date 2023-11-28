@@ -2,6 +2,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import VideoContent from '../VideoContent/VideoContent';
 import OurPackages from '../OurPackages/OurPackages';
+import MeetOurGuides from '../MeetOurGuides/MeetOurGuides';
 
 
 
@@ -30,7 +31,7 @@ const TabItems = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
+                    <MeetOurGuides></MeetOurGuides>
                 </TabPanel>
             </Tabs>
         </div>

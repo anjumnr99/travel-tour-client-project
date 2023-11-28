@@ -11,6 +11,9 @@ import PackageDetails from "../pages/Home/OurPackages/PackageDetails";
 import MyBookings from "../pages/MyBookings/MyBookings";
 import PrivateRouter from "./PrivateRouter";
 import AllPackages from "../pages/AllPackages/AllPackages";
+import GuideProfile from "../pages/GuideProfile/GuideProfile";
+import MakeReview from "../pages/GuideProfile/Review/MakeReview";
+import TypePackage from "../pages/Home/TourType/TypePackage";
 
 
 const mainRoute = createBrowserRouter([
@@ -44,6 +47,14 @@ const mainRoute = createBrowserRouter([
         element: <PackageDetails></PackageDetails>
       },
       {
+        path: 'packages/:type',
+        element: <TypePackage></TypePackage>
+      },
+      {
+        path: 'guide-profile/:id',
+        element:<GuideProfile></GuideProfile>
+      },
+      {
         path: 'my-bookings',
         element: <PrivateRouter>
           <MyBookings></MyBookings>
@@ -52,17 +63,18 @@ const mainRoute = createBrowserRouter([
       {
         path:'all-packages',
         element:<AllPackages></AllPackages>
-      }
+      },
+      {
+        path: 'login',
+        element: <Login></Login>
+      },
+      {
+        path: 'register',
+        element: <Register></Register>
+      },
     ]
-  },
-  {
-    path: '/login',
-    element: <Login></Login>
-  },
-  {
-    path: '/register',
-    element: <Register></Register>
-  },
+  }
+
 ]);
 
 export default mainRoute;

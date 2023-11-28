@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,6 +11,7 @@ import './styles.css';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import useGuideList from '../../../Hooks/useGuideList';
+import { Link } from 'react-router-dom';
 
 
 const TourGuideList = () => {
@@ -46,7 +47,7 @@ const TourGuideList = () => {
                 className="mySwiper "
             >
                 {
-                    guideList?.map((item, index) => <SwiperSlide key={index}><div  className='p-3 flex flex-col bg-blue-100 items-center'>
+                    guideList?.map((item, index) => <SwiperSlide key={index}><Link to={`/guide-profile/${item._id}`} className='p-3 flex flex-col bg-blue-100 items-center'>
                         <div className="avatar">
                             <div className="w-56 rounded-full ring ring-base-500 ring-offset-base-300 ring-offset-4">
                                 <img src={item.profilePicture} />
@@ -58,7 +59,7 @@ const TourGuideList = () => {
                             <p className=' text-slate-600 font-bold'>{item?.contactDetails?.address}</p>
                             <p className=' text-slate-400 '>Experience : {item?.workExperience}</p>
                         </div>
-                    </div></SwiperSlide>)
+                    </Link></SwiperSlide>)
                 }
                
             </Swiper>
