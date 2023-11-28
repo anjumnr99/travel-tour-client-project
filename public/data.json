@@ -1,0 +1,72 @@
+[
+    {
+        "userName": "Harry Davis",
+        "userEmail": "harry.davis@example.com",
+        "userImage": "https://i.ibb.co/drv98cr/Beautiful-girl-stands-near-walll-with-leaves.jpg",
+        "spotPicture": "https://i.ibb.co/4m5PCLb/Lalbagh-Fort-Dhaka-Bangladesh.jpg",
+        "reviewDescription": "A delightful tour! The spot was a hidden gem, and the guide's enthusiasm made the trip even more enjoyable. Can't wait to do it again!"
+    },
+    {
+        "userName": "Ivy Turner",
+        "userEmail": "ivy.turner@example.com",
+        "userImage": "https://i.ibb.co/ZTSXH76/seductive-colorful-lipstick-colors-lip-care-coloring-lipstick-sexiness-generative-ai-210687-2103.jpg",
+        "spotPicture": "https://i.ibb.co/9T5MLRB/Coxs-bazar-2892524-1280.jpg",
+        "reviewDescription": "I had an amazing experience on the tour. The spot was breathtaking, and the guide's stories made it even more special. 10/10!"
+    },
+    {
+        "userName": "Jack Harris",
+        "userEmail": "jack.harris@example.com",
+        "userImage": "https://i.ibb.co/StxmyHp/team3.jpg",
+        "spotPicture": "https://i.ibb.co/XZNKb9J/Sunset-and-night-beach.jpg",
+        "reviewDescription": "The tour was fantastic, and the spot was simply stunning. The guide was friendly and informative. I can't wait to explore more with this company!"
+    },
+    {
+        "userName": "Alice Johnson",
+        "userEmail": "alice.johnson@example.com",
+        "userImage": "https://i.ibb.co/MSzymtc/team-2.jpg",
+        "spotPicture": "https://i.ibb.co/t8VZwMQ/Lalbag-Fort.jpg",
+        "reviewDescription": "Had an amazing time on the tour. The views were breathtaking, and the guide was very knowledgeable. Highly recommended!"
+    },
+    {
+        "userName": "Bob Smith",
+        "userEmail": "bob.smith@example.com",
+        "userImage": "https://i.ibb.co/GvF0532/client4.jpg",
+        "spotPicture": "https://i.ibb.co/WzjgvNf/Tuk-Tuk-Eco-Village.jpg",
+        "reviewDescription": "The tour exceeded my expectations! The spot was beautiful, and the tour guide made the experience enjoyable and informative."
+    },
+    {
+        "userName": "Charlie Brown",
+        "userEmail": "charlie.brown@example.com",
+        "userImage": "https://i.ibb.co/JQn12tY/team1.jpg",
+        "spotPicture": "https://i.ibb.co/Jnzw8X7/Hz-Shah-Jalal-in-Sylhet.png",
+        "reviewDescription": "A fantastic tour with stunning scenery. The organization was top-notch, and I learned a lot about the local history. Will definitely come back!"
+    },
+    {
+        "userName": "David Miller",
+        "userEmail": "david.miller@example.com",
+        "userImage": "https://i.ibb.co/T0S3Pr5/client3.jpg",
+        "spotPicture": "https://i.ibb.co/TPyP91k/Inani-Beach.jpg",
+        "reviewDescription": "I enjoyed every moment of the tour. The spot was picturesque, and the guide's stories added a lot to the experience. I recommend it to everyone."
+    },
+    {
+        "userName": "Emily White",
+        "userEmail": "emily.white@example.com",
+        "userImage": "https://i.ibb.co/L8SJGYt/closeup-portrait-beautiful-woman-with-bright-make-up-red-nails-sexy-young-adult-girl-with-red-lipsti.jpg",
+        "spotPicture": "https://i.ibb.co/5s4Wv3D/Madhabkunda-waterfall.jpg",
+        "reviewDescription": "Such a memorable tour! The spot was magical, and the guide was friendly and helpful. I captured some breathtaking photos. Thank you!"
+    },
+    {
+        "userName": "Frank Robinson",
+        "userEmail": "frank.robinson@example.com",
+        "userImage": "https://i.ibb.co/crJJz5J/client2.jpg",
+        "spotPicture": "https://i.ibb.co/h9zk32J/Sundarban-1.jpg",
+        "reviewDescription": "I had a great time on the tour. The spot had a unique charm, and the guide's passion for the area was evident. A must-try experience!"
+    },
+    {
+        "userName": "Grace Taylor",
+        "userEmail": "grace.taylor@example.com",
+        "userImage": "https://i.ibb.co/Pgqjpk3/client1.jpg",
+        "spotPicture": "https://i.ibb.co/3B0pHjx/Ancient-Hindu-039-s-Temple-Puthia.jpg",
+        "reviewDescription": "The tour was fantastic from start to finish. The spot was serene, and the guide's knowledge added depth to the experience. Highly recommended!"
+    }
+]

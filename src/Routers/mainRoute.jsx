@@ -14,6 +14,8 @@ import AllPackages from "../pages/AllPackages/AllPackages";
 import GuideProfile from "../pages/GuideProfile/GuideProfile";
 import MakeReview from "../pages/GuideProfile/Review/MakeReview";
 import TypePackage from "../pages/Home/TourType/TypePackage";
+import AllStory from "../pages/Home/Story/AllStory";
+import StoryDetails from "../pages/Home/Story/StoryDetails";
 
 
 const mainRoute = createBrowserRouter([
@@ -47,6 +49,10 @@ const mainRoute = createBrowserRouter([
         element: <PackageDetails></PackageDetails>
       },
       {
+        path: 'all-stories/:id',
+        element: <StoryDetails></StoryDetails>
+      },
+      {
         path: 'packages/:type',
         element: <TypePackage></TypePackage>
       },
@@ -63,6 +69,10 @@ const mainRoute = createBrowserRouter([
       {
         path:'all-packages',
         element:<AllPackages></AllPackages>
+      },
+      {
+        path:'all-stories',
+        element:<AllStory></AllStory>
       },
       {
         path: 'login',

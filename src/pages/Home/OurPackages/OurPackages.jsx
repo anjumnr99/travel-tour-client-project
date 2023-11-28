@@ -10,7 +10,7 @@ const OurPackages = () => {
         <div className="">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
                 {
-                    packages.slice(0, 4).map(item => <PackageCard key={item._id} item={item}></PackageCard>)
+                    packages?.slice(0, 4).map(item => <PackageCard key={item._id} item={item}></PackageCard>)
                 }
 
             </div>

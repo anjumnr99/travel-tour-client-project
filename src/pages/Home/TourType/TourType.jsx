@@ -61,7 +61,7 @@ const TourType = () => {
                 }}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
+                className=" swiper-container-1 "
             >
                 {
                     tourType?.map((item, index) => <SwiperSlide key={index}><Slide item={item} ></Slide></SwiperSlide>)

@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import cityScape from '../../../assets/cityscape.mp4'
+import './tourType.css';
 
 const Slide = ({ item }) => {
     const { type, video } = item || {};
