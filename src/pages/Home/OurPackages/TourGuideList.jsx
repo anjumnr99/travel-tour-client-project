@@ -57,7 +57,7 @@ const TourGuideList = () => {
                         <div className='text-left my-5'>
                             <p className='text-2xl text-base-600 font-semibold'>{item.name}</p>
                             <p className=' text-slate-600 font-bold'>{item?.contactDetails?.address}</p>
-                            <p className=' text-slate-400 '>Experience : {item?.workExperience}</p>
+                            <p className=' text-slate-400 '>Experience : {parseInt(Math.random()*10)}</p>
                         </div>
                     </Link></SwiperSlide>)
                 }

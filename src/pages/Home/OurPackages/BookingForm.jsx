@@ -8,6 +8,7 @@ import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
@@ -19,6 +20,7 @@ const BookingForm = ({ price,trip_title }) => {
     const axiosPublic = useAxiosPublic();
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosSecure = useAxiosSecure();
 
 
     const onSubmit = async (data) => {
@@ -47,15 +49,13 @@ const BookingForm = ({ price,trip_title }) => {
 
                 }
 
-                const bookingRes = await axiosPublic.post('/bookings', bookingDetails, {
-                    withCredentials: true
-                });
+                const bookingRes = await axiosSecure.post('/bookings', bookingDetails);
                 console.log(bookingRes.data);
                 if (bookingRes.data.insertedId) {
-                    // reset();
+                    reset();
                     Swal.fire({
                         title: "Your booking is Confirm .",
-                        html: `See <a href="/my-bookings">My Bookings</a>`,
+                        html: `See <a href="/dashboard/my-bookings">My Bookings</a>`,
                         icon: "success",
                      
                     });

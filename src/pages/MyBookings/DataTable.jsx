@@ -1,30 +1,65 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
+
 import { useQuery } from "@tanstack/react-query";
 import Row from "./Row";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 const DataTable = () => {
     const { user } = useContext(AuthContext);
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
+    const [applyBtnShow, setApplyBtnShow] = useState([0]);
+    // const { width, height } = useWindowSize()
     console.log(user);
-    const { data: bookings } = useQuery({
+    const { data: bookings, refetch } = useQuery({
         queryKey: ['bookings'],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/bookings?email=${user?.email}`, {
-                withCredentials: true
-            });
+            const res = await axiosSecure.get(`/bookings/users?email=${user?.email}`);
             // console.log('res data:',res.data);
             return res.data;
         }
     });
     console.log(bookings);
 
+    useEffect(() => {
+        if (bookings) {
+            const acceptedBooking = bookings?.filter(booking => booking?.status?.toUpperCase() === 'Accepted'.toUpperCase());
+            console.log(acceptedBooking);
+            setApplyBtnShow(acceptedBooking)
+        }
+
+    }, [bookings]);
 
 
     return (
         <div className="overflow-x-auto">
+            {
+                applyBtnShow.length > 3 && <Confetti
+                    // width={600}
+                    // height={500}
+                    recycle={false}
+                    numberOfPieces={1000}
+                    tweenDuration={5000}
+                    // drawShape={ctx => {
+                    //     ctx.beginPath()
+                    //     for(let i = 0; i < 22; i++) {
+                    //       const angle = 0.35 * i
+                    //       const x = (0.2 + (1.5 * angle)) * Math.cos(angle)
+                    //       const y = (0.2 + (1.5 * angle)) * Math.sin(angle)
+                    //       ctx.lineTo(x, y)
+                    //     }
+                    //     ctx.stroke()
+                    //     ctx.closePath()
+                    //   }}
+                    onConfettiComplete={Confetti}
+
+                    className="w-full"
+                />
+            }
+
             <table className="table table-xs">
                 <thead>
                     <tr>
@@ -58,7 +93,7 @@ const DataTable = () => {
                 <tbody>
                     {
                         bookings?.map((booking, index) => <tr key={index}>
-                            <Row index={index} booking={booking}></Row>
+                            <Row index={index} refetch={refetch} booking={booking} applyBtnShow={applyBtnShow} ></Row>
                         </tr>)
                     }
 

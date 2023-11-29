@@ -19,6 +19,9 @@ import StoryDetails from "../pages/Home/Story/StoryDetails";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import MyProfile from "../pages/MyProfile/MyProfile";
 import MyWishList from "../pages/MyWishList/MyWishList";
+import MyAssignedTour from "../pages/TourGuide/MyAssignedTour/MyAssignedTour";
+import AddPackage from "../pages/AddPackage/AddPackage";
+import ManageUsers from "../pages/ManageUsers/ManageUsers";
 
 
 const mainRoute = createBrowserRouter([
@@ -61,16 +64,16 @@ const mainRoute = createBrowserRouter([
       },
       {
         path: 'guide-profile/:id',
-        element:<GuideProfile></GuideProfile>
+        element: <GuideProfile></GuideProfile>
       },
 
       {
-        path:'all-packages',
-        element:<AllPackages></AllPackages>
+        path: 'all-packages',
+        element: <AllPackages></AllPackages>
       },
       {
-        path:'all-stories',
-        element:<AllStory></AllStory>
+        path: 'all-stories',
+        element: <AllStory></AllStory>
       },
       {
         path: 'login',
@@ -82,22 +85,50 @@ const mainRoute = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
-        children:[
+        element: <PrivateRouter>
+          <Dashboard></Dashboard>
+        </PrivateRouter>,
+        children: [
           {
             path: 'my-profile',
-            element: <MyProfile></MyProfile>
+            element: <PrivateRouter>
+              <MyProfile></MyProfile>
+            </PrivateRouter>
           },
           {
             path: 'my-bookings',
-            element:<MyBookings></MyBookings>
-           
+            element: <PrivateRouter>
+              <MyBookings></MyBookings>
+            </PrivateRouter>
+
           },
           {
             path: 'my-wishlist',
-            element:<MyWishList></MyWishList>
-           
+            element: <PrivateRouter>
+              <MyWishList></MyWishList>
+            </PrivateRouter>
+
           },
+          // TourGuide route
+          {
+            path: 'my-assigned-tour',
+            element: <PrivateRouter>
+              <MyAssignedTour></MyAssignedTour>
+            </PrivateRouter>
+
+          },
+          {
+            path: 'add-package',
+            element: <PrivateRouter>
+              <AddPackage></AddPackage>
+            </PrivateRouter>
+          },
+          {
+            path: 'manage-users',
+            element: <PrivateRouter>
+              <ManageUsers></ManageUsers>
+            </PrivateRouter>
+          }
         ]
       }
     ]

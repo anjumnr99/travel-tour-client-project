@@ -2,8 +2,10 @@
 
 const AboutUs = () => {
     return (
-        <div>
-            About Us
+        <div className="min-h-screen" >
+
+
+
         </div>
     );
 };

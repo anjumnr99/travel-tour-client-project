@@ -2,8 +2,8 @@
 
 const Community = () => {
     return (
-        <div>
-            Community
+        <div className="min-h-screen">
+           
         </div>
     );
 };

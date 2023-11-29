@@ -1,19 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
+
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
 const MyWishList = () => {
     const { user } = useContext(AuthContext);
 
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure()
+   
     const { data: wishLists, refetch } = useQuery({
         queryKey: ['wishList'],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/wishLists?email=${user?.email}`, { withCredentials: true })
+            const res = await axiosSecure.get(`/wishLists?email=${user?.email}`)
             console.log(res.data);
             return res.data;
         }
@@ -39,7 +41,7 @@ const MyWishList = () => {
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosPublic.delete(`/wishLists/${id}`, { withCredentials: true })
+                axiosSecure.delete(`/wishLists/${id}`)
                     .then(res => {
                         console.log(res.data);
                         if (res.data?.deletedCount > 0) {
@@ -67,6 +69,7 @@ const MyWishList = () => {
 
         });
     }
+    
     console.log(wishLists);
     return (
         <div>

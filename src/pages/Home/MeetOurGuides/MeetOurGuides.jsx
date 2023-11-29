@@ -56,8 +56,8 @@ const MeetOurGuides = () => {
                         </div>
                         <div className='text-left my-5'>
                             <p className='text-lg text-base-600 font-semibold'>{item.name}</p>
-                            <p className=' text-base text-slate-600 font-bold'>{item?.contactDetails?.address}</p>
-                            <p className=' text-slate-400 '>Experience : {item?.workExperience}</p>
+                            <p className=' text-base text-slate-600 font-bold'>Address: Chittagong, Bangladesh</p>
+                            <p className=' text-slate-400 '>Work Experience: 2 years</p>
                         </div>
                         <Link to={`/guide-profile/${item._id}`} className='w-full'>
                             <button className=' border bg-slate-500 w-full uppercase btn'>details</button></Link>

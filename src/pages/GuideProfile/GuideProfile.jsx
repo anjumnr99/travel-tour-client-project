@@ -27,7 +27,8 @@ const GuideProfile = () => {
         }
     });
 
-    const { _id, name, profilePicture, contactDetails, education, skills, workExperience } = guideDetail || {};
+    const { _id, name, profilePicture, email } = guideDetail || {};
+    // const { _id, name, profilePicture, contactDetails, education, skills, workExperience } = guideDetail || {};
 
     console.log(guideDetail);
    
@@ -54,13 +55,13 @@ const GuideProfile = () => {
                 <div className="flex flex-col justify-between  p-4 leading-normal h-96 md:h-full md:w-[50%] ">
                     <h5 className=" text-xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                     <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">
-                        I was a student of {education?.school}. I was from the department of {education?.degree}.My graduation year {education?.graduationYear}</p>
-                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Work Experience: {workExperience}</p>
-                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Skills: {skills}</p>
+                    I was a student of Chittagong University. I was from the department of Geography and Cultural Studies.My graduation year 2018</p>
+                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Work Experience: 2 years</p>
+                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Skills: Cultural Heritage,Outdoor Adventure</p>
 
-                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Address: {contactDetails?.address}</p>
-                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Email: {contactDetails?.email}</p>
-                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Contact number: {contactDetails?.phone}</p>
+                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Address: Chittagong, Bangladesh</p>
+                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Email: {email}</p>
+                    <p className=" font-normal lg:text-xl lg:mb-3  text-gray-700 dark:text-gray-400">Contact number: 01723456321</p>
                 </div>
             </div>
             <h1 className='text-3xl lg:text-5xl font-semibold text-slate-800 text-center my-10'>Write Something about your experience</h1>

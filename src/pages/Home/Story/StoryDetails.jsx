@@ -9,7 +9,7 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const StoryDetails = () => {
     const { id } = useParams();
     const axiosPublic = useAxiosPublic();
-    const shareUrl = "https://www.facebook.com";
+    // const shareUrl = "https://www.facebook.com";
     // console.log(id);
     const { user } = useContext(AuthContext)
     const navigate = useNavigate();
@@ -52,7 +52,7 @@ const StoryDetails = () => {
 
                         <div className="Demo__some-network">
                             <FacebookShareButton
-                                url={shareUrl}
+                                url={`https://travel-tour-auth.web.app/all-stories/${_id}`}
                                 className="Demo__some-network__share-button"
                             >
                                 <FacebookIcon size={50} round />
@@ -60,7 +60,7 @@ const StoryDetails = () => {
 
                             <div>
                                 <FacebookShareCount
-                                    url={shareUrl}
+                                    url={`https://travel-tour-auth.web.app/all-stories/${_id}`}
                                     className="Demo__some-network__share-count"
                                 >
                                     {(count) => count}

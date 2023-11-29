@@ -2,8 +2,8 @@
 
 const Blogs = () => {
     return (
-        <div>
-            Blogs
+        <div className="min-h-screen">
+            
         </div>
     );
 };

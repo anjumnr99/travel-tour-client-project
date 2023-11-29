@@ -1,8 +1,21 @@
-# React + Vite
+# https://travel-tour-auth.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website name is Travel Beat. Ii is an online platform that provides comprehensive information and resources for travelers seeking guidance on popular destinations in Bangladesh. Users can access detailed information of the attractive tourist spots and many more. 
+User interface:
+- User can book their preferable packages.
+- Once the package accepted they can not cancel their bookings.
+- They can also choose their tour guide
+- User can add package their wishlist.
 
-Currently, two official plugins are available:
+Tour Guide interface:
+- They can seen their assigned tours in their profile->dashboard->My assigned tour.
+- They can accept and reject a package.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Admin interface:
+- An admin can make a user a Tour Guide or admin. 
+- Admin can also add a new package.
+
+The other features :
+- Story sharing.
+- A story can share in facebook.
+- Make review.

@@ -3,6 +3,7 @@ import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 
@@ -11,6 +12,7 @@ const MakeReview = () => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic()
+    const axiosSecure = useAxiosSecure()
 
     const handleRatingChange = (event) => {
         setRating(Number(event.target.value));
@@ -36,7 +38,7 @@ const MakeReview = () => {
 
             console.log(review);
 
-            axiosPublic.post('/reviews',review, {withCredentials:true})
+            axiosSecure.post('/reviews',review)
             .then(res=>{
                 setRating(0)
                 console.log(res.data);

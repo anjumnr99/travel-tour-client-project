@@ -9,65 +9,68 @@ import Swal from "sweetalert2";
 const PackageCard = ({ item }) => {
     const [isClick, setIsClick] = useState(true);
     const { user } = useContext(AuthContext)
-    const navigate = useNavigate();
-    const location = useLocation();
+     const navigate = useNavigate();
+     const location = useLocation();
     // console.log(Object.keys(item));
     const { _id, images, tour_type, trip_title, price, tour_description, tour_plan, tour_guides } = item || {};
 
+    console.log(images[0].length);
+    
     const axiosPublic = useAxiosPublic()
-
+    
     const handleCLick = () => {
-
-        if (user) {
-            if (isClick) {
+        
+        if (user ) {
+            if(isClick){
                 console.log(isClick);
                 const wishDetails = {
                     userEmail: user?.email,
-                    packageName: trip_title,
-                    packagePrice: price,
-                    packageId: _id
+                    packageName : trip_title,
+                    packagePrice:price,
+                    packageId : _id
                 }
                 console.log(wishDetails);
-
-                axiosPublic.post('/wishLists', wishDetails, { withCredentials: true })
-                    .then(res => {
-                        console.log(res.data);
-                        if (res.data.insertedId) {
-                            const Toast = Swal.mixin({
-                                toast: true,
-                                position: "top-end",
-                                showConfirmButton: false,
-                                timer: 3000,
-                                timerProgressBar: true,
-                                didOpen: (toast) => {
-                                    toast.onmouseenter = Swal.stopTimer;
-                                    toast.onmouseleave = Swal.resumeTimer;
-                                }
-                            });
-                            Toast.fire({
-                                icon: "success",
-                                title: "Added to My Wishlist"
-                            });
-                        }
-                    })
+    
+                axiosPublic.post('/wishLists',wishDetails)
+                .then(res=>{
+                    console.log(res.data);
+                    if(res.data.insertedId){
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: "top-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.onmouseenter = Swal.stopTimer;
+                              toast.onmouseleave = Swal.resumeTimer;
+                            }
+                          });
+                          Toast.fire({
+                            icon: "success",
+                            title: "Added to My Wishlist"
+                          });
+                    }
+                })
 
             }
 
 
-        } else {
-            navigate('/login', { state: location.pathname })
-        }
+        }else{
+            navigate('/login', {state : location.pathname})
+        } 
 
     }
     return (
 
-        <div className="max-w-sm pt-[140px] md:pt-[180px] lg:pt:[127] pb-20 px-5 relative bg-white border h-96 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 " style={{ backgroundImage: `url(${images[0]})` }}>
+        <div className="max-w-sm  relative bg-white border h-96 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 " 
+        style={{ backgroundImage: `url(${images[0] ?images[0]:images})`}}>
 
             {/* <img className="rounded-t-lg block h-full " src="https://i.ibb.co/TPyP91k/Inani-Beach.jpg" /> */}
             <button onClick={() => handleCLick(setIsClick(!isClick))} className="absolute top-4 right-4">
                 <GoHeartFill className={`text-4xl ${isClick ? 'text-white' : 'text-red-600'} `} />
             </button>
-            <div className="p-2 bg-black bg-opacity-50 w-full absolute bottom-0 ">
+            <div className="p-2 bg-black bg-opacity-50 w-full rounded-b-lg absolute bottom-0 ">
 
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-slate-200 dark:text-white">{trip_title}</h5>
                 <div className="flex items-center justify-between">

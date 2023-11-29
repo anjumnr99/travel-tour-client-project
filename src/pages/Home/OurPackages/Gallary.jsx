@@ -6,7 +6,7 @@ const Gallary = ({ images }) => {
 
     useEffect(() => {
       const loadImageDimensions = async () => {
-        const imagePromises = images.map(async (imageSrc) => {
+        const imagePromises = images?.map(async (imageSrc) => {
           const img = new Image();
           img.src = imageSrc;
           await img.decode(); // Wait for the image to load

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
@@ -12,6 +13,7 @@ const MyProfile = () => {
     console.log(user);
     const { register, handleSubmit, reset } = useForm();
     const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
 
     const onSubmit = async (data) => {
 
@@ -38,9 +40,7 @@ const MyProfile = () => {
             }
             console.log(postStory);
 
-            const postRes = await axiosPublic.post('/stories', postStory, {
-                withCredentials: true
-            });
+            const postRes = await axiosSecure.post('/stories', postStory);
             console.log(postRes.data);
             if (postRes.data.insertedId) {
                 reset();
