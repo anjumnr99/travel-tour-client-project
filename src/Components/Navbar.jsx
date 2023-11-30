@@ -197,7 +197,7 @@ const Navbar = () => {
                                 </div>
                                 <ul className="py-2 text-md text-gray-600 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
                                     <li>
-                                        <Link to='/dashboard' className="block text-md px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</Link>
+                                        <Link to='/dashboard/my-profile' className="block text-md px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</Link>
                                     </li>
                                     <li>
                                         <Link className="block text-md px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Offer Announcements</Link>

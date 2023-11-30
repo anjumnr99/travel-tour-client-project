@@ -22,12 +22,14 @@ import MyWishList from "../pages/MyWishList/MyWishList";
 import MyAssignedTour from "../pages/TourGuide/MyAssignedTour/MyAssignedTour";
 import AddPackage from "../pages/AddPackage/AddPackage";
 import ManageUsers from "../pages/ManageUsers/ManageUsers";
+import ErrorPage from "../Components/ErrorPage";
 
 
 const mainRoute = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

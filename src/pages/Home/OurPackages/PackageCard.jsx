@@ -62,8 +62,8 @@ const PackageCard = ({ item }) => {
 
     }
     return (
-
-        <div className="max-w-sm  relative bg-white border h-96 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 " 
+        
+        <Link to={`/package-details/${_id}`} className="max-w-sm  relative bg-white border h-96 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 " 
         style={{ backgroundImage: `url(${images[0] ?images[0]:images})`}}>
 
             {/* <img className="rounded-t-lg block h-full " src="https://i.ibb.co/TPyP91k/Inani-Beach.jpg" /> */}
@@ -89,9 +89,7 @@ const PackageCard = ({ item }) => {
             </div>
 
 
-        </div>
-
-
+        </Link>
 
     );
 };
