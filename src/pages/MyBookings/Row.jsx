@@ -1,11 +1,12 @@
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
 
 
-const Row = ({ booking, index,refetch,applyBtnShow }) => {
+const Row = ({ booking, index, refetch, applyBtnShow }) => {
     const { _id, name, email, guide, date, image, price, packageName, status } = booking || {};
     const axiosPublic = useAxiosPublic()
-    
+
     const handleDelete = (id) => {
         console.log(id);
         const swalWithBootstrapButtons = Swal.mixin({
@@ -78,7 +79,9 @@ const Row = ({ booking, index,refetch,applyBtnShow }) => {
 
             <td className="flex items-center gap-3 px-6 py-4">
                 {
-                    status === 'Accepted' ? <button className="font-sm btn btn-outline hover:bg-blue-300 hover:text-blue-900 text-blue-600 dark:text-blue-500 ">Pay</button>
+                    status === 'Accepted' ? <Link to='/dashboard/payment'>
+                        <button className="font-sm btn btn-outline hover:bg-blue-300 hover:text-blue-900 text-blue-600 dark:text-blue-500 ">Pay</button>
+                    </Link>
                         : <button disabled className="font-sm btn btn-outline hover:bg-blue-300 hover:text-blue-900 text-blue-600 dark:text-blue-500 ">Pay</button>
                 }
                 {
@@ -86,12 +89,12 @@ const Row = ({ booking, index,refetch,applyBtnShow }) => {
                 }
                 {
                     // eslint-disable-next-line react/prop-types
-                    applyBtnShow?.length > 3 ?  <button  className="font-sm btn  btn-outline hover:bg-yellow-300 hover:text-yellow-900 text-yellow-400 dark:text-yellow-500 ">Apply</button> :
-                    <button disabled className="font-sm btn  btn-outline hover:bg-yellow-300 hover:text-yellow-900 text-yellow-400 dark:text-yellow-500 ">Apply</button> 
+                    applyBtnShow?.length > 3 ? <button className="font-sm btn  btn-outline hover:bg-yellow-300 hover:text-yellow-900 text-yellow-400 dark:text-yellow-500 ">Apply</button> :
+                        <button disabled className="font-sm btn  btn-outline hover:bg-yellow-300 hover:text-yellow-900 text-yellow-400 dark:text-yellow-500 ">Apply</button>
                 }
 
 
-                
+
             </td>
         </>
 

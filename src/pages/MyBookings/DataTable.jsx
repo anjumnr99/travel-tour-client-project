@@ -7,6 +7,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 // import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
+import Swal from "sweetalert2";
 
 const DataTable = () => {
     const { user } = useContext(AuthContext);
@@ -29,9 +30,25 @@ const DataTable = () => {
             const acceptedBooking = bookings?.filter(booking => booking?.status?.toUpperCase() === 'Accepted'.toUpperCase());
             console.log(acceptedBooking);
             setApplyBtnShow(acceptedBooking)
+            if(applyBtnShow.length > 3){
+                Swal.fire({
+                    title: "Congratulation!",
+                    text: "You have got a discount. Click the discount button to get a discount!" ,
+                    width: 500,
+                    padding: "2em",
+                    color: "#716add",
+                    background: "#fff url(/images/trees.png)",
+                    backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("/images/nyan-cat.gif")
+                      left top
+                      no-repeat
+                    `
+                  });
+            }
         }
 
-    }, [bookings]);
+    }, [applyBtnShow.length, bookings]);
 
 
     return (

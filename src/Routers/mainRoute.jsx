@@ -23,13 +23,14 @@ import MyAssignedTour from "../pages/TourGuide/MyAssignedTour/MyAssignedTour";
 import AddPackage from "../pages/AddPackage/AddPackage";
 import ManageUsers from "../pages/ManageUsers/ManageUsers";
 import ErrorPage from "../Components/ErrorPage";
+import Payment from "../pages/Payment/Payment";
 
 
 const mainRoute = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -108,6 +109,13 @@ const mainRoute = createBrowserRouter([
             path: 'my-wishlist',
             element: <PrivateRouter>
               <MyWishList></MyWishList>
+            </PrivateRouter>
+
+          },
+          {
+            path: 'payment',
+            element: <PrivateRouter>
+              <Payment></Payment>
             </PrivateRouter>
 
           },
